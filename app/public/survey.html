@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>FriendFinder</title>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
+
 <body>
-    
+    <div class="container px-0">
+        <h1 class="mt-3" style="font-size: 32px">Survey Questions</h1>
+        <hr>
+        <h4 style="font-weight: bold">About You</h4>
+        <form>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name" aria-describedby="userName" required>
+
+            </div>
+            <div class="form-group">
+                <label for="photo-link">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photo-link" required>
+            </div>
+
+            <hr>
+           
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-12">
+                
+                <label for="question1">You recharge by spending time alone.</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                <select class="form-control" id="question1">
+                    <option>Select an option</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col-10"></div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!-- <form>
+
+        <h4 style="font-weight: bold">About You</h4>
+        <h5>Name (Required)</h5>
+        <input type="text" id="name">
+        <h5>Link to Photo Image (Required)</h5>
+        <input type="text" id="photo-link">
+        <hr>
+
+        <h4 style="font-weight: bold">Question 1</h4>
+        <h6>You recharge by spending time by yourself.</h6>
+
+
+
+
+
+    </form> -->
+
+    </div>
 </body>
+
 </html>
