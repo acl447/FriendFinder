@@ -2,9 +2,9 @@
 
 let friends = [{
 
-    "name": "Ally",
-    "photo": "",
-    "scores": []
+    name: "Ally",
+    photo: "",
+    scores: []
 
 
 }];
