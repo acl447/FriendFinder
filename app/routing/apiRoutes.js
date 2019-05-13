@@ -27,11 +27,15 @@ module.exports = function (app) {
     //For example, User fills out survey... this data is then sent to the server...
     // Then the server saves the data to the friends array)
     //This route will also be used to handle the compatibility logic.
-    // app.post("/api/friends", function (req, res) {
+     app.post("/api/friends", function (req, res) {
 
     //     let totalDifference = 0;
 
-    //     if (userData) {
+         if (friendsData) {
+
+                friendsData.push(req.body);
+
+                res.json(true);
 
     //         for (let i = 0; i < friends.length; i++) {
 
@@ -48,13 +52,13 @@ module.exports = function (app) {
     //                     totalDifference += difference;
 
     //                     console.log(totalDifference);
-    //                 }
+                    }
     //             }
     //         }
 
     //     }
 
-    // })
+     })
 
 };
 

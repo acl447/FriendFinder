@@ -1,12 +1,11 @@
 //Data
 
-let friends = [{
+let friendsArray = [
+    {
+        name: "Ally",
+        photo: "hey",
+        scores: [1, 5]
+    }
+];
 
-    name: "Ally",
-    photo: "",
-    scores: []
-
-
-}];
-
-module.exports = friends;
+module.exports = friendsArray;
