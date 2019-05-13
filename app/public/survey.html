@@ -16,113 +16,34 @@
 </head>
 
 <body>
-    <div class="container px-0">
+    <div class="container p-0">
         <h1 class="mt-3" style="font-size: 32px">Survey Questions</h1>
         <hr>
         <h4 style="font-weight: bold">About You</h4>
         <form>
             <div class="form-group">
-                <label for="name">Name (Required)</label>
+                <label for="name"><strong>Name (Required)</strong></label>
                 <input type="text" class="form-control" id="name" aria-describedby="userName" required>
 
             </div>
             <div class="form-group">
-                <label for="photo-link">Link to Photo Image (Required)</label>
+                <label for="photo-link"><strong>Link to Photo Image (Required)</strong></label>
                 <input type="text" class="form-control" id="photo-link" required>
             </div>
 
             <hr>
-           
+
             <div class="form-group">
                 <div class="row">
                     <div class="col-12">
-                
-                <label for="question1">You recharge by spending time alone.</label>
+
+                        <h4 class="mt-2"><strong>Question 1</strong></h4>
+                        <label for="question1"><strong>You recharge by spending time alone.</strong></label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2">
-                <select class="form-control" id="question1">
-                    <option>Select an option</option>
-                    <option>1 (Strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly agree)</option>
-                </select>
-            </div>
-            <div class="col-10"></div>
-                </div>
-                
-            </div>
-            <div class="form-group">
-                    <div class="row">
-                        <div class="col-12">
-           
-                <label for="question2">You like to try new things.</label>
-                        </div>
-                    </div>
-                <select class="form-control" id="question2">
-                    <option>Select an option</option>
-                    <option>1 (Strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                            <div class="row">
-                                <div class="col-12">
-                <label for="question3">You find it easy to empathize with others.</label>
-                                </div>
-                            </div>
-                <select class="form-control" id="question3">
-                    <option>Select an option</option>
-                    <option>1 (Strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <div class="row">
-                            <div class="col-12">
-                <label for="question4">You cannot imagine living without dogs.</label>
-                            </div>
-                    </div>
-                <select class="form-control" id="question4">
-                    <option>Select an option</option>
-                    <option>1 (Strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                    <div class="row">
-                            <div class="col-12">
-                    <label for="question5">You would describe yourself as creative.</label>
-                            </div>
-                    </div>
-                    <select class="form-control" id="question5">
-                        <option>Select an option</option>
-                        <option>1 (Strongly disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                        <div class="row">
-                                <div class="col-12">
-                        <label for="question6">You have often been recognized for your musical abilities.</label>
-                                </div>
-                        </div>
-                        <select class="form-control" id="question6">
+                        <select class="form-control mb-2" id="question1">
                             <option>Select an option</option>
                             <option>1 (Strongly disagree)</option>
                             <option>2</option>
@@ -131,13 +52,40 @@
                             <option>5 (Strongly agree)</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                            <div class="row">
-                                    <div class="col-12">
-                            <label for="question7">You like to be in a leadership role.</label>
-                                    </div>
-                            </div>
-                            <select class="form-control" id="question7">
+                    <div class="col-10"></div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="mt-2"><strong>Question 2</strong></h4>
+                        <label for="question2"><strong>You like to try new things.</strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <select class="form-control mb-2" id="question2">
+                            <option>Select an option</option>
+                            <option>1 (Strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-10"></div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="mt-2"><strong>Question 3</strong></h4>
+                            <label for="question3"><strong>You find it easy to empathize with others.</strong></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <select class="form-control mb-2" id="question3">
                                 <option>Select an option</option>
                                 <option>1 (Strongly disagree)</option>
                                 <option>2</option>
@@ -146,13 +94,18 @@
                                 <option>5 (Strongly agree)</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                                <div class="row">
-                                        <div class="col-12">
-                                <label for="question8">You like to think outside of the box.</label>
-                                        </div>
-                                </div>
-                                <select class="form-control" id="question8">
+                        <div class="col-10"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mt-2"><strong>Question 4</strong></h4>
+                                <label for="question4"><strong>You cannot imagine living without dogs.</strong></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <select class="form-control mb-2" id="question4">
                                     <option>Select an option</option>
                                     <option>1 (Strongly disagree)</option>
                                     <option>2</option>
@@ -161,13 +114,19 @@
                                     <option>5 (Strongly agree)</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                    <div class="row">
-                                            <div class="col-12">
-                                    <label for="question9">You like working with numbers.</label>
-                                            </div>
-                                    </div>
-                                    <select class="form-control" id="question9">
+                            <div class="col-10"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="mt-2"><strong>Question 5</strong></h4>
+                                    <label for="question5"><strong>You would describe yourself as
+                                            creative.</strong></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <select class="form-control mb-2" id="question5">
                                         <option>Select an option</option>
                                         <option>1 (Strongly disagree)</option>
                                         <option>2</option>
@@ -176,13 +135,19 @@
                                         <option>5 (Strongly agree)</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                        <div class="row">
-                                                <div class="col-12">
-                                        <label for="question10">You like to travel.</label>
-                                                </div>
-                                        </div>
-                                        <select class="form-control" id="question10">
+                                <div class="col-10"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="mt-2"><strong>Question 6</strong></h4>
+                                        <label for="question6"><strong>You have often been recognized for your musical
+                                                abilities.</strong></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <select class="form-control mb-2" id="question6">
                                             <option>Select an option</option>
                                             <option>1 (Strongly disagree)</option>
                                             <option>2</option>
@@ -191,10 +156,97 @@
                                             <option>5 (Strongly agree)</option>
                                         </select>
                                     </div>
-                                    
-            <button type="submit" class="btn btn-primary">Submit</button>
+                                    <div class="col-10"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="mt-2"><strong>Question 7</strong></h4>
+                                            <label for="question7"><strong>You like to be in a leadership
+                                                    role.</strong></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <select class="form-control mb-2" id="question7">
+                                                <option>Select an option</option>
+                                                <option>1 (Strongly disagree)</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5 (Strongly agree)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-10"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h4 class="mt-2"><strong>Question 8</strong></h4>
+                                                <label for="question8"><strong>You like to think outside of the
+                                                        box.</strong></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <select class="form-control mb-2" id="question8">
+                                                    <option>Select an option</option>
+                                                    <option>1 (Strongly disagree)</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5 (Strongly agree)</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-10"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h4 class="mt-2"><strong>Question 9</strong></h4>
+                                                    <label for="question9"><strong>You like working with
+                                                            numbers.</strong></label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <select class="form-control mb-2" id="question9">
+                                                        <option>Select an option</option>
+                                                        <option>1 (Strongly disagree)</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5 (Strongly agree)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-10"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h4 class="mt-2"><strong>Question 10</strong></h4>
+                                                        <label for="question10"><strong>You like to
+                                                                travel.</strong></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <select class="form-control mb-2" id="question10">
+                                                            <option>Select an option</option>
+                                                            <option>1 (Strongly disagree)</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5 (Strongly agree)</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-10"></div>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary mt-3"
+                                                    style="width: 100%">Submit</button>
         </form>
-       
+
 
     </div>
 </body>
