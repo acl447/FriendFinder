@@ -1,7 +1,7 @@
 //Load Data
 //Link routes to data source
 
-let friendsData = require("../data/friends")
+let friendsData = require("../data/friends");
 
 
 //Routing
