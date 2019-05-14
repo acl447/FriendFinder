@@ -3,12 +3,52 @@
 
 let friendsData = require("../data/friends");
 
+//Declare function to compare 2 arrays of data 
+
+function compare(entireFriendsList, newFriendArray) {
+
+    let totalDifference = 0;
+    let totalDifferencesArray = [];
+
+    for (let i = 0; i < entireFriendsList.length; i++) {
+
+
+        for (let j = 0; j < entireFriendsList[i].scores.length; j++) {
+
+            let difference = Math.abs(entireFriendsList[i].scores[j] - newFriendArray[j]);
+
+            if (difference !== 0) {
+
+                console.log(difference);
+
+                totalDifference += difference;
+
+            }
+
+        };
+
+        console.log(totalDifference);
+
+        totalDifferencesArray.push(totalDifference);
+
+
+    }
+
+    let sortedtotalDiffArray = totalDifferencesArray.sort();
+
+    console.log("The lowest total difference is " + sortedtotalDiffArray[0]);
+
+
+};
+
+
+
 
 //Routing
 
 module.exports = function (app) {
 
-    // API GET Requests
+    // API GET Request
     // Below code handles when users "visit" a page.
     // When a user visits a link
     // they are shown a JSON of all possible friends.
@@ -17,48 +57,42 @@ module.exports = function (app) {
         res.json(friendsData);
 
 
+
     });
 
 
 
-    // API POST Requests
+    // API POST Request
     // Below code handles when a user submits a form and thus submits data to the server.
     //This will be used to handle incoming survey results. 
     //For example, User fills out survey... this data is then sent to the server...
     // Then the server saves the data to the friends array)
     //This route will also be used to handle the compatibility logic.
-     app.post("/api/friends", function (req, res) {
+    app.post("/api/friends", function (req, res) {
 
-    //     let totalDifference = 0;
+        //Converts the array of new survey answers from strings to integers
+        let parsedScoresArray = [];
 
-         if (friendsData) {
+        let newFriendScores = req.body.scores;
 
-                friendsData.push(req.body);
+        for (let i = 0; i < newFriendScores.length; i++) {
 
-                res.json(true);
+            parsedScoresArray.push(parseInt(newFriendScores[i]));
 
-    //         for (let i = 0; i < friends.length; i++) {
+        }
+        console.log(parsedScoresArray);
 
-    //             let scores = friends[i].scores;
+        //Compare the array of new survey answers to the other old arrays of survey answers
+        compare(friendsData, parsedScoresArray);
 
-    //             for (let j = 0; j < scores.length; j++) {
+        //Add the whole newFriend object-- name, photo, scores -- to the array of friends data
+        // friendsData.push(req.body);
 
-    //                 if (scores[j] - userScores[k] !== 0) {
+        // res.json(true);
 
-    //                     let difference = scores[j] - userScores[k];
+        // console.log(friendsData);
 
-    //                     console.log(difference);
-
-    //                     totalDifference += difference;
-
-    //                     console.log(totalDifference);
-                    }
-    //             }
-    //         }
-
-    //     }
-
-     })
+    })
 
 };
 

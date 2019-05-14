@@ -258,7 +258,7 @@
 
     </div>
     <hr>
-    <a href="/api/friends">API Friends List</a> | <a href="#" class="pt-5">GitHub Repo</a>
+    <a href="/api/friends">API Friends List</a> | <a href="https://github.com/acl447/FriendFinder" class="pt-5">GitHub Repo</a>
 </body>
 
 </html>
@@ -272,16 +272,21 @@
         //grab the user's answers to survey questions
         let newFriend = {
 
-            answer1: $("#question1").val().trim(),
-            answer2: $("#question2").val().trim(),
-            answer3: $("#question3").val().trim(),
-            answer4: $("#question4").val().trim(),
-            answer5: $("#question5").val().trim(),
-            answer6: $("#question6").val().trim(),
-            answer7: $("#question7").val().trim(),
-            answer8: $("#question8").val().trim(),
-            answer9: $("#question9").val().trim(),
-            answer10: $("#question10").val().trim()
+            name: $("#name").val().trim(),
+            photo: $("#photo-link").val().trim(),
+            scores: [
+
+            $("#question1").val().trim(),
+            $("#question2").val().trim(),
+            $("#question3").val().trim(),
+            $("#question4").val().trim(),
+            $("#question5").val().trim(),
+            $("#question6").val().trim(),
+            $("#question7").val().trim(),
+            $("#question8").val().trim(),
+            $("#question9").val().trim(),
+            $("#question10").val().trim()
+        ]
         };
 
         console.log(newFriend);
