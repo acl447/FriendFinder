@@ -19,7 +19,7 @@ function compare(entireFriendsList, newFriendArray) {
 
             if (difference !== 0) {
 
-                console.log(difference);
+                //console.log(difference);
 
                 totalDifference += difference;
 
@@ -86,11 +86,11 @@ module.exports = function (app) {
         compare(friendsData, parsedScoresArray);
 
         //Add the whole newFriend object-- name, photo, scores -- to the array of friends data
-        // friendsData.push(req.body);
+        friendsData.push(req.body);
 
-        // res.json(true);
+        res.json(true);
 
-        // console.log(friendsData);
+        console.log(friendsData);
 
     })
 
