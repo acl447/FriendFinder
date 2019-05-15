@@ -257,27 +257,25 @@
                                                     style="width: 100%">Submit</button>
         </form>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Your Closest Match Is: </h3>
-            </div>
-            <div class="modal-body">
-                <p id="nameAndPhoto"></p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
-
-
 
     </div>
     <hr>
     <a href="/api/friends">API Friends List</a> | <a href="https://github.com/acl447/FriendFinder" class="pt-5">GitHub
         Repo</a>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="">×</button>
+            <h3 id="myModalLabel">Your Closest Match Is: </h3>
+        </div>
+        <div class="modal-body">
+            <p id="nameAndPhoto"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -316,12 +314,12 @@
             //if survey answers submitted, tell the user
             if (data) {
 
-                alert("Your answers have been submitted!")
+                //alert("Your answers have been submitted!")
             }
 
             else {
 
-                alert("You have not answered any survey questions. Please answer the survey questions before submitting.")
+                //alert("You have not answered any survey questions. Please answer the survey questions before submitting.")
             }
 
             //clear the form when submitting
@@ -337,25 +335,20 @@
             $("#question10").val("");
         });
 
+        function openModal() {
+
+            $("#myModal").removeClass("hide");
+
+
+        };
+
+        openModal();
+
 
 
     });
 
-    $("#friendForm").on("submit", function(ev) {
-    $("#myModal").modal({
-        show: "false"
-    }); 
 
-
-    let data = $(this).serializeObject();
-    json_data = JSON.stringify(data);
-    $("#results").text(json_data); 
-    $(".modal-body").text(json_data); 
-
-    // $("#results").text(data);
-
-    ev.preventDefault();
-});
 
 
 

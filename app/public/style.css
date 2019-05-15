@@ -1,0 +1,13 @@
+/* Show Modal */
+
+#myModal {
+
+
+    display: block;
+
+}
+
+.hide {
+
+    display: none !important; 
+}
