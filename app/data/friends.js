@@ -10,13 +10,13 @@ let friendsArray = [{
 
 {
     name: "Jerome",
-    photo: "https://www.pexels.com/photo/man-in-white-dress-shirt-holding-suit-jacket-1043474/",
+    photo: "https://unsplash.com/photos/veoAiHnM3AI",
     scores: [5, 1, 2, 3, 4, 2, 2, 3, 1, 5]
 },
 
 {
     name: "Kandace",
-    photo: "https://www.pexels.com/photo/woman-in-black-scoop-neck-shirt-smiling-38554/",
+    photo: "https://unsplash.com/photos/DrVJk1EaPSc",
     scores: [1, 1, 2, 4, 2, 3, 4, 1, 2, 3]
 
 }];
