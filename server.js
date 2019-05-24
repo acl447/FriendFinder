@@ -1,8 +1,6 @@
 //Dependencies
 let express = require("express");
 
-let path = require("path");
-
 //Creates an instance of an express app
 let app = express();
 
