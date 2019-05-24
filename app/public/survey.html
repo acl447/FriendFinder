@@ -263,14 +263,11 @@
     <a href="/api/friends">API Friends List</a> | <a href="https://github.com/acl447/FriendFinder" class="pt-5">GitHub
         Repo</a>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-          </button>
-
+    
 
           
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -280,7 +277,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
+                  <h2 id="match-name"></h2>
+                  <img id="match-img" src="">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -336,6 +334,9 @@
 
         };
 
+        //if all required fields are filled
+        if (validateForm()) {
+
         //grab the user's answers to survey questions
         let newFriend = {
 
@@ -343,60 +344,42 @@
             photo: $("#photo-link").val(),
             scores: [
 
-                $("#question1").val().trim(),
-                $("#question2").val().trim(),
-                $("#question3").val().trim(),
-                $("#question4").val().trim(),
-                $("#question5").val().trim(),
-                $("#question6").val().trim(),
-                $("#question7").val().trim(),
-                $("#question8").val().trim(),
-                $("#question9").val().trim(),
-                $("#question10").val().trim()
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val()
             ]
         };
 
         console.log(newFriend);
 
+        //AJAX post the data to the friends API
         $.post("/api/friends", newFriend, function (data) {
 
+            //Grab the result from the AJAX post so that the best match's name and photo are displayed
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
 
-            //if survey answers submitted, tell the user
-            if (data) {
-
-                //alert("Your answers have been submitted!")
-            }
-
-            else {
-
-                //alert("You have not answered any survey questions. Please answer the survey questions before submitting.")
-            }
-
-            //clear the form when submitting
-            $("#question1").val("");
-            $("#question2").val("");
-            $("#question3").val("");
-            $("#question4").val("");
-            $("#question5").val("");
-            $("#question6").val("");
-            $("#question7").val("");
-            $("#question8").val("");
-            $("#question9").val("");
-            $("#question10").val("");
+            //show the modal with the best match
+            $("#results-modal").modal("toggle");
+        
         });
 
-        function openModal() {
 
-            $("#myModal").removeClass("hide");
+    } else {
 
-
-        };
-
-        openModal();
-
-
+        alert("Please fill out all fields before submitting!");
+    }
 
     });
+
+    
 
 
 
