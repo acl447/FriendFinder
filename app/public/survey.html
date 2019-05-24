@@ -53,8 +53,8 @@
                 </div>
                 <div class="row">
                     <div class="col-2">
-                        <select class="form-control mb-2" id="question1">
-                            <option>Select an option</option>
+                        <select class="chosen-select mb-2" id="question1">
+                            <option value="">Select an option</option>
                             <option value="1">1 (Strongly disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -75,8 +75,8 @@
                 </div>
                 <div class="row">
                     <div class="col-2">
-                        <select class="form-control mb-2" id="question2">
-                            <option>Select an option</option>
+                        <select class="chosen-select mb-2" id="question2">
+                            <option value="">Select an option</option>
                             <option value="1">1 (Strongly disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -95,8 +95,8 @@
                     </div>
                     <div class="row">
                         <div class="col-2">
-                            <select class="form-control mb-2" id="question3">
-                                <option>Select an option</option>
+                            <select class="chosen-select mb-2" id="question3">
+                                <option value="">Select an option</option>
                                 <option value="1">1 (Strongly disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -115,8 +115,8 @@
                         </div>
                         <div class="row">
                             <div class="col-2">
-                                <select class="form-control mb-2" id="question4">
-                                    <option>Select an option</option>
+                                <select class="chosen-select mb-2" id="question4">
+                                    <option value="">Select an option</option>
                                     <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -136,8 +136,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-2">
-                                    <select class="form-control mb-2" id="question5">
-                                        <option>Select an option</option>
+                                    <select class="chosen-select mb-2" id="question5">
+                                        <option value="">Select an option</option>
                                         <option value="1">1 (Strongly disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -157,8 +157,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-2">
-                                        <select class="form-control mb-2" id="question6">
-                                            <option>Select an option</option>
+                                        <select class="chosen-select mb-2" id="question6">
+                                            <option value="">Select an option</option>
                                             <option value="1">1 (Strongly disagree)</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -178,8 +178,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
-                                            <select class="form-control mb-2" id="question7">
-                                                <option>Select an option</option>
+                                            <select class="chosen-select mb-2" id="question7">
+                                                <option value="">Select an option</option>
                                                 <option value="1">1 (Strongly disagree)</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -199,8 +199,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-2">
-                                                <select class="form-control mb-2" id="question8">
-                                                    <option>Select an option</option>
+                                                <select class="chosen-select mb-2" id="question8">
+                                                    <option value="">Select an option</option>
                                                     <option value="1">1 (Strongly disagree)</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -220,8 +220,8 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-2">
-                                                    <select class="form-control mb-2" id="question9">
-                                                        <option>Select an option</option>
+                                                    <select class="chosen-select mb-2" id="question9">
+                                                        <option value="">Select an option</option>
                                                         <option value="1">1 (Strongly disagree)</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -241,8 +241,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-2">
-                                                        <select class="form-control mb-2" id="question10">
-                                                            <option>Select an option</option>
+                                                        <select class="chosen-select mb-2" id="question10">
+                                                            <option value="">Select an option</option>
                                                             <option value="1">1 (Strongly disagree)</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -309,6 +309,32 @@
     $("#submit").on("click", function (event) {
 
         event.preventDefault();
+
+        //form validation
+        function validateForm() {
+
+            let isValid = true;
+
+            $(".form-control").each(function() {
+
+                if ($(this).val() === "") {
+
+                    isValid = false;
+                }
+            });
+
+            $(".chosen-select").each(function() {
+
+               if ($(this).val() === "") {
+
+                    isValid = false;
+               }
+                
+            });
+
+            return isValid;
+
+        };
 
         //grab the user's answers to survey questions
         let newFriend = {
