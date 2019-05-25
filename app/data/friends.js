@@ -10,13 +10,13 @@ let friendsArray = [{
 
 {
     name: "Bill",
-    photo: "http://itu150.org/wp-content/uploads/2015/05/gates-web-500x500.jpg",
+    photo: "https://s3.amazonaws.com/ogden_images/www.freemanjournal.net/images/2019/05/01213519/Jeffrey-Brandt1.jpg",
     scores: ["5", "1", "2", "3", "4", "2", "2", "3", "1", "5"]
 },
 
 {
     name: "Hannah",
-    photo: "https://inspirationalwomenseries.files.wordpress.com/2017/12/aaeaaqaaaaaaaai_aaaajdm1mmjmotvkltq1mdatndu4mi04yzrjlwm4ndjkymvmody0na.jpg?w=500&h=500&crop=1",
+    photo: "https://buildingbridgesshift.org/wp-content/uploads/2018/10/Medrano-2-400x400.jpeg",
     scores: ["1", "1", "2", "4", "2", "3", "4", "1", "2", "3"]
 
 }];
