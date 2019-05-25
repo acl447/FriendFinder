@@ -9,7 +9,7 @@ let friendsData = require("../data/friends.js");
 module.exports = function(app) {
     // API GET Requests
     // Below code handles when users "visit" a page.
-    // In each of the below cases when a user visits a link
+    // When a user visits a link
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
   
@@ -55,7 +55,7 @@ module.exports = function(app) {
         console.log(currentFriend.name);
   
         // Loop through all the scores of each friend
-        for (var j = 0; j < currentFriend.scores.length; j++) {
+        for (let j = 0; j < currentFriend.scores.length; j++) {
           let currentFriendScore = currentFriend.scores[j];
           let currentUserScore = userScores[j];
   
